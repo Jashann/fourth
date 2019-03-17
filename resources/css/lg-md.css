@@ -1,0 +1,34 @@
+@media screen and (max-width:1120px)
+{
+    span.sm-no-display
+    {
+        display: none;
+    }
+}
+@media screen and (max-width:950px) and (min-width:769px)
+{
+    div#login-signup
+    {
+        display: none;
+    }
+    header ul li
+    {
+        padding: 0 2px;
+    }
+    #searchbar
+    {
+        order: 0;
+    }
+    .container-m
+    {
+        order: 1;    
+    }
+    #navbar
+    {
+        order: 2;
+    }
+    .services img,img
+    {
+        width: 187px;
+    }
+}

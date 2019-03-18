@@ -44,6 +44,7 @@
                                 <li><a href="#ageCal">Age Calculator</a></li>
                                 <li class="sm-no-display"><a class="sm-no-display" href="#rgame">Random Word Guessing
                                         Game</a></li>
+                                <li><a href="#currency">Currency Convertor</a></li>
                             </ul>
                         </li>
                         <li> <a href="#section-1-about">About</a> </li>
@@ -261,7 +262,7 @@
             <div class="b-txt w-bg text-center">
                 <h2 id="results">Results : </h2>
                 <h3>Results will be shown here...</h3>
-                <img src="./vendors/img_svg/giphy.gif" class="no-h block m-a" alt="">
+                <img src="./vendors/img_svg/giphy.gif" class="no-h d-block m-a" alt="">
                 <div class="results">
                     <div class="input-group">
                         <span class='capital'>YOUR AGE IS : </span>
@@ -281,7 +282,7 @@
                     </div>
 
                 </div>
-                <span><small class="bl-txt block">(Posted on 10.03.2019)</small></span>
+                <span><small class="bl-txt d-block">(Posted on 10.03.2019)</small></span>
             </div>
         </div>
     </section>
@@ -325,19 +326,19 @@
                         <input type="text" id='#dir'>
                     </div>
                     <div>
-                        <input class="block m-a text-center dark-bg w-txt my-3" type="submit" value="Submit">
+                        <input class="d-block m-a text-center dark-bg w-txt my-3" type="submit" value="Submit">
                     </div>
                 </form>
-                <table class="block">
-                    <thead class="block">
+                <table class="d-block">
+                    <thead class="d-block">
                         <tr>
                             <th>Title</th>
                             <th>Cast</th>
                             <th>Directors</th>
                             <th>D</th>
                         </tr>
-                    </thead class='block'>
-                    <tbody class="block">
+                    </thead class='d-block'>
+                    <tbody class="d-block">
                         <tr>
                             <td>Title</td>
                             <td>Cast</td>
@@ -349,14 +350,38 @@
             </div>
         </div>
     </section>
-
+    
+    <!-- Start of Section-8 -->
     <section id="section-8">
-        <div class="container-full">
-            <div>
+        <div class="container-full w-txt cin-bg">
+                    <div id="currency">
+                        <form class="card">
+                            <h2 class="text-center">Currency Convertor</h2>
+                            <div id="inputs">
+                                <div id='from-inputs'>
+                                    <label for="cf-select">From : </label>
+                                    <select name="" id="cf-select">
+                                    </select>
+                                    <span class="mx-1"></span>
+                                    <label for="ct-select">To : </label>
+                                    <select name="" id="ct-select">
+                                    </select>
+                                </div>
+                                <div id='to-inputs'>
+                                    <input type="text" id='amount' class="w-100 my-1" placeholder="Enter Value">
+                                    <input type="text" id="result" class="w-100 " disabled placeholder="Conversion be shown here">
+                                </div>
+                            </div>
+                            <input id="btn4" class="d-block w-100 my-1 b-bg w-txt" type="submit" value="Submit">
+                        </form>
+                    </div>
+                    <hr class="sm-no-display">
+                    <div>
 
-            </div>
+                    </div>            
         </div>
     </section>
+    <!-- End of Section-8 -->
 
     <!-- Start of footer -->
     <footer id="footer">

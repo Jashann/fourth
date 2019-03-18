@@ -105,6 +105,11 @@ body
 {
     color: #505050;
 }
+select
+{
+    border: none;
+    padding: 0.3rem 0.8rem;
+}
 /* End of Global styling */
 
 /* Start of Utility classes */
@@ -250,8 +255,8 @@ img:hover
 {
     text-transform: capitalize;
 }
-
-.block{display: block;}.flex{display: flex;}.inline{display: inline;}.in-block{display: inline-block}
+.d-block{display: block;}.d-flex{display: flex;}.d-inline{display: inline;}.d-inline-block{display: inline-block}
+.w-25{width: 25%}.w-50{width: 50%}.w-75{width: 75%}.w-100{width: 100%}
 /* End of Utility classes */
 
 /* Start of header styling */

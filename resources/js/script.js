@@ -7,7 +7,8 @@ let clicked = false;
 function contentLoaded() {
     // Start of Smooth Scrolling
     $('#header nav a').on('click', function (e) {
-        e.preventDefault();
+        if(e.target.id!=="noprevent")
+            e.preventDefault();
         // e.target === this; here
         let HASH = this.hash;
         if (HASH !== "") {

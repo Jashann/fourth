@@ -4,16 +4,23 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136959021-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-136959021-1');
+    </script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Weather</title>
   </head>
   <body>
 
-    <navbar class="navbar navbar-light bg-light">
+    <navbar class="navbar navbar-dark bg-secondary">
         <div class="container">
-            <div class="navbar-brand">DesignX <span class="text-muted">modern design</span>
+            <div class="navbar-brand">DesignX
             </div>
                 <nav class="nav nav-pills">
                         <li class="nav-item">
@@ -24,9 +31,9 @@
     </navbar>
 
 
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center card bg-info text-white lead p-3">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 text-center offset-md-3 card bg-info text-white lead p-3">
                 <h2 class="display-4">Current Weather</h2>
                 <hr>
                <div id="output">

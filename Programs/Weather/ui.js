@@ -7,7 +7,6 @@ class UI
     }
     showUI(response)
     {
-        console.log(response);
         let icon = "https://";
         let img = response.current.condition.icon;
         img = img.substring(2);

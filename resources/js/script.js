@@ -529,6 +529,43 @@ function contentLoaded() {
         xhr.send();
     } // End of Get Response
 
+    // Start of Forms Validation 
+    document.querySelector('#name').onblur = validateName;
+    document.querySelector('#email').onblur = validateEmail;
+    document.querySelector('#phone').onblur = validatePhone;
+
+    function validateName()
+    {
+        let name = document.querySelector('#name').value;
+        const re = /^[A-Z][A-Za-z\s]{1,19}$/;
+        if(!re.test(name))
+            document.querySelector('#name').style.border = "1px solid red";
+        else
+        document.querySelector('#name').style.border = "none";
+            
+    }    
+    function validateEmail()
+    {
+        let email = document.querySelector('#email').value;
+        const re = /^([a-zA-Z0-9\.\-]+)@([a-zA-Z]{2,5})\.([a-zA-z]{2,5})$/;
+
+        if(!re.test(email))
+            document.querySelector('#email').style.border = "1px solid red";
+        else
+        document.querySelector('#email').style.border = "none";
+    }
+    function validatePhone()
+    {
+        let phone = document.querySelector('#phone').value;
+        const re = /^\(?(\d{5})\)?\-?\s?\(?(\d{5})\)?$/;
+        
+        if(!re.test(phone))
+            document.querySelector('#phone').style.border = "1px solid red";
+        else
+        document.querySelector('#phone').style.border = "none";
+    }
+
+    // End of Forms Validation 
 
 } //End of contentLoaded
 

@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded',()=>
              weather.getWeather("Paris").then(res=> ui.showUI(res)).catch(err=> err);
         else
         {
-            console.log(cityName);
             weather.getWeather(cityName).then(res=> ui.showUI(res)).catch(err=> err);
         }
     }

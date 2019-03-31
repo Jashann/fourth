@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Dictionary</title>
+</head>
+<body>
+
+    <navbar class="navbar navbar-dark bg-secondary">
+            <div class="container">
+                <div class="navbar-brand">DesignX
+                </div>
+                    <nav class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link bg-primary active" href="../../index.html">Home</a>
+                            </li>
+                    </nav>
+            </div>
+        </navbar>
+        
+    <div class="container mt-5" id="dictionary">
+        <div class="card">
+            <div class="card-header">
+                    <div class="title text-center text-info display-4 p-1">Dictionary</div>
+            </div>
+            <div class="card-header">
+                <form action="" class="row form-inline m-auto">
+                    <input type="text" class="form-control col-sm-12 col-md-9 mb-1 ml-md-1" name="" id="" placeholder="Search for a Word">
+                    <button class="col-sm-12 col-md-1 btn btn-info mb-1 ml-md-1" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="card-body">
+                <div class="card bg-info text-white">
+                    <div id="searchedWord" class="card-header text-capitalize">
+                            <!-- Voluminous -->
+                            <!-- <div class="bg-danger text-center rounded">Please Search Any Of The following Words</div>
+                            <ol id="otherWords" class="breadcrumb text-dark">
+                                    <li class="breadcrumb-item">voluminous</li>
+                                    <li class="breadcrumb-item">voluminously</li>
+                                    <li class="breadcrumb-item">voluminousness</li>
+                                    <li class="breadcrumb-item">voluminousnesses</li>
+                            </ol> -->
+                    </div>
+                    <div class="card-body">
+                        <div id="type" class="text-capitalize"></div>
+                        <ol id="definitions">
+                            <!-- <li>having or marked by great volume or bulk : large; also : full</li>
+                            <li>numerous</li>
+                            <li>filling or capable of filling a large volume or several volumes</li> -->
+                        </ol>
+                        <ol id="relatedWords" class="breadcrumb text-dark">
+                            <!-- <li class="breadcrumb-item">voluminous</li>
+                            <li class="breadcrumb-item">voluminously</li>
+                            <li class="breadcrumb-item">voluminousness</li>
+                            <li class="breadcrumb-item">voluminousnesses</li> -->
+                        </ol>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

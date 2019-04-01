@@ -52,7 +52,7 @@ function display()
             searchedWordH.innerHTML = "";
             typeH.textContent = "";
             relatedWordsH.textContent = "";
-            definitiinpu.innerHTML = "";
+            definitionsH.innerHTML = "";
 
             // Filling Text and Displaying
             searchedWordH.innerHTML = word;

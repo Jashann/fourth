@@ -15,7 +15,7 @@
                 </div>
                     <nav class="nav nav-pills">
                             <li class="nav-item">
-                                <a class="nav-link bg-primary active" href="../../index.html">Home</a>
+                                <a class="nav-link bg-light text-dark active" href="../../index.html">Home</a>
                             </li>
                     </nav>
             </div>
@@ -34,6 +34,7 @@
             </div>
             <div class="card-body">
                 <div class="card bg-info text-white">
+                    
                     <div id="searchedWord" class="card-header text-capitalize">
                             <!-- Voluminous -->
                             <!-- <div class="bg-danger text-center rounded">Please Search Any Of The following Words</div>
@@ -45,6 +46,13 @@
                             </ol> -->
                     </div>
                     <div class="card-body">
+
+                        <div style="display:none" id="suggestions" class="text-capitalize">
+                                <h2>Searched Word does not Exist! Try any of the Following</h2>
+                                <ol id="findwords" class="breadcrumb text-dark">
+                                </ol>
+                        </div>
+
                         <div id="type" class="text-capitalize"></div>
                         <ol id="definitions">
                             <!-- <li>having or marked by great volume or bulk : large; also : full</li>

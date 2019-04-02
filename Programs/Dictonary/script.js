@@ -14,9 +14,8 @@ async function getData(word)
 // Getting Word 
 const dictionary = document.querySelector('#dictionary'); form = dictionary.querySelector('form'); input = form.querySelector('input');
 definitionsH = dictionary.querySelector('#definitions'); typeH = dictionary.querySelector('#type'); relatedWordsH = dictionary.querySelector('#relatedWords');  
-searchedWordH = dictionary.querySelector('#searchedWord');
-form.onsubmit =
-function inputChange(e)
+searchedWordH = dictionary.querySelector('#searchedWord'); findWordsH = document.querySelector("#findwords"); suggestionsH = document.querySelector('#suggestions');
+form.onsubmit = function(e)
 {
     e.preventDefault();
     word = input.value;
@@ -44,14 +43,16 @@ function display()
             showOtherWords(res);
         else
         {
+            suggestionsH.style = "display : none";   // Hiding Suggestions or find words
+            relatedWordsH.style = "display : flex";
+
+            clearDisplay(); // clearing display
+
             let type = res[0].fl;                  // returns string
             let definitions = res[0].shortdef;      // returns an array
             let relatedWords = res[0].meta.stems;   // returns an array;
             let relatedWordsWithType = res[0].uros; // returns an array, each item has ure(related word) & fl(type)
 
-            searchedWordH.innerHTML = "";
-            typeH.textContent = "";
-            relatedWordsH.textContent = "";
 
             // Filling Text and Displaying
             searchedWordH.innerHTML = word;
@@ -71,5 +72,27 @@ function display()
             });
         }
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log(err));  
+} // display function end
+function showOtherWords(res)
+{
+    clearDisplay();
+    res.forEach(word =>
+        {
+            suggestionsH.style = "display : block";
+            relatedWordsH.style = "display : none";
+            let li = document.createElement('li');
+            li.append(document.createTextNode(word));
+            li.classList.add("breadcrumb-item","find-word");
+            findWordsH.append(li);
+        });
+}
+
+function clearDisplay()
+{
+    findWordsH.textContent = "";
+    searchedWordH.innerHTML = "";
+    typeH.textContent = "";
+    relatedWordsH.textContent = "";
+    definitionsH.textContent = "";
 }

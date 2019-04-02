@@ -53,13 +53,11 @@ function display()
             let relatedWords = res[0].meta.stems;   // returns an array;
             let relatedWordsWithType = res[0].uros; // returns an array, each item has ure(related word) & fl(type)
 
-<<<<<<< HEAD
-=======
             searchedWordH.innerHTML = "";
             typeH.textContent = "";
             relatedWordsH.textContent = "";
             definitionsH.innerHTML = "";
->>>>>>> 38049fbb6ec62dd5b9820928e084ac30a50b542f
+
 
             // Filling Text and Displaying
             searchedWordH.innerHTML = word;

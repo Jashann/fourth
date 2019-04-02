@@ -11,7 +11,7 @@ async function getData(word)
 }
 // Structuring UI  
 
-// Getting Word 
+// Variables & Constants Declaration
 const dictionary = document.querySelector('#dictionary'); form = dictionary.querySelector('form'); input = form.querySelector('input');
 definitionsH = dictionary.querySelector('#definitions'); typeH = dictionary.querySelector('#type'); relatedWordsH = dictionary.querySelector('#relatedWords');  
 searchedWordH = dictionary.querySelector('#searchedWord'); findWordsH = document.querySelector("#findwords"); suggestionsH = document.querySelector('#suggestions');
@@ -19,17 +19,20 @@ form.onsubmit = function(e)
 {
     e.preventDefault();
     word = input.value;
-    changer();
+    input.value = "";
+    changer(word);
 }
 
-function changer()
+function changer(w)
 { 
-        input.value = "";
-        if(word !=="")
-        display()
+        if(w !=="")
+        {
+            word = w;
+            display();
+        }
 }
 // Calling at the Loading
-changer();
+changer('hate');
 
 // Showing Searched Content
 function display()
@@ -38,7 +41,6 @@ function display()
     json.then(res =>
     {
         console.log(res);
-        console.log(res[0]);
         if(res[0].fl === undefined)
             showOtherWords(res);
         else
@@ -101,3 +103,12 @@ function clearDisplay()
     relatedWordsH.textContent = "";
     definitionsH.textContent = "";
 }
+
+dictionary.addEventListener('click',e=>
+{
+    if(e.target.classList[1] === "find-word")
+    {
+        let text = e.target.textContent;
+        changer(text);
+    }
+});

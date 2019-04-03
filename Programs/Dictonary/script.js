@@ -13,8 +13,9 @@ async function getData(word)
 
 // Variables & Constants Declaration
 const dictionary = document.querySelector('#dictionary'); form = dictionary.querySelector('form'); input = form.querySelector('input');
-definitionsH = dictionary.querySelector('#definitions'); typeH = dictionary.querySelector('#type'); relatedWordsH = dictionary.querySelector('#relatedWords');  
+typeH = dictionary.querySelector('#type'); relatedWordsH = dictionary.querySelector('#relatedWords');  
 searchedWordH = dictionary.querySelector('#searchedWord'); findWordsH = document.querySelector("#findwords"); suggestionsH = document.querySelector('#suggestions');
+content = document.querySelector('#content');
 form.onsubmit = function(e)
 {
     e.preventDefault();
@@ -50,33 +51,48 @@ function display()
 
             clearDisplay(); // clearing display
 
+            res.forEach((resource)=>
+            {
+            // create Elements
+            let div = document.createElement("div");
+            let h3 = document.createElement('h3');
+            let ol = document.createElement('ol');
+            div.classList.add("definitions");
+
+            let h3text = resource.hwi.hw+" ("+resource.fl+") ";
+            h3.textContent = h3text;
+
             let type = res[0].fl;                  // returns string
-            let definitions = res[0].shortdef;      // returns an array
+            let definitions = resource.shortdef;      // returns an array
             let relatedWords = res[0].meta.stems;   // returns an array;
             let relatedWordsWithType = res[0].uros; // returns an array, each item has ure(related word) & fl(type)
 
             searchedWordH.innerHTML = "";
-            typeH.textContent = "";
+    
             relatedWordsH.textContent = "";
-            definitionsH.innerHTML = "";
 
 
             // Filling Text and Displaying
             searchedWordH.innerHTML = word;
-            typeH.textContent = type;
+
             definitions.forEach(meaning=>
             {
                 let li = document.createElement('li');
                 li.append(document.createTextNode(meaning));
-                definitionsH.append(li);
+                ol.append(li);
             });
+            div.append(h3);
+            div.append(ol);
+            content.append(div);
             relatedWords.forEach(word=>
             {
+
                 let li = document.createElement('li');
                 li.append(document.createTextNode(word));
                 li.classList.add("breadcrumb-item");
                 relatedWordsH.append(li);
             });
+            })
         }
     })
     .catch(err => console.log(err));  
@@ -99,9 +115,12 @@ function clearDisplay()
 {
     findWordsH.textContent = "";
     searchedWordH.innerHTML = "";
-    typeH.textContent = "";
     relatedWordsH.textContent = "";
-    definitionsH.textContent = "";
+    let definitionsH = dictionary.querySelectorAll('.definitions');
+    definitionsH.forEach(def=>
+    {
+        def.remove();
+    })
 }
 
 dictionary.addEventListener('click',e=>

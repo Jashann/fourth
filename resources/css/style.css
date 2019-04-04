@@ -348,6 +348,7 @@ header ul li:hover ul li{display: block; margin: 0.3rem 0} header ul li i.fas.fa
     height: 93vh;
     position: relative;
     background: url('../../vendors/img_svg/pexels-photo-129105.jpeg') no-repeat center/cover;
+    background-attachment: fixed;
     
 }
 #showcase:before

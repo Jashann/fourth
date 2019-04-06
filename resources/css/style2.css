@@ -1,0 +1,14 @@
+/* Start of Responsive Embed Video */
+#embed-video 
+{
+    position: relative;
+    padding-bottom: 30.25%;
+}
+#embed-video iframe {
+    width: 100%;
+    height: 92%;
+    position: absolute;
+    left: 0;
+    top: 4%;
+}
+/* End of Responsive Embed Video */

@@ -71,4 +71,15 @@
         border: none;
     }
 /*  End of Mobile Header */
+/*  Start of responsive Video */
+    #embed-video
+    {
+        padding-bottom: 56.25%;
+    }
+    #embed-video iframe 
+    {
+        top: 0;
+        height: 100%;
+    }
+/*  End of responsive Video */
 }

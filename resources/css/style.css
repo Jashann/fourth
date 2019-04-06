@@ -257,6 +257,7 @@ img:hover
 }
 .d-block{display: block;}.d-flex{display: flex;}.d-inline{display: inline;}.d-inline-block{display: inline-block}
 .w-25{width: 25%}.w-50{width: 50%}.w-75{width: 75%}.w-100{width: 100%}
+.font-large{font-size: xx-large}
 /* End of Utility classes */
 
 /* Start of header styling */

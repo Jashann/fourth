@@ -160,6 +160,7 @@ h1,h2,h3,h4,h5,h6
     width: 100%;
 }
 .py-1{padding: 1rem 0;}.py-2{padding: 2rem 0;}.py-3{padding: 3rem 0;}
+.py-1-imp{padding: 1rem 0 !important;} .py-2-imp{padding: 2rem auto !important;} .py-3-imp{padding: rem 0 !important;}
 .px-1{padding: 0 1rem;} .px-2{padding: 0 1rem;} .px-3{padding: 0 3rem;}
 .p-1{padding: 1rem} .p-2{padding: 2rem } .p-3{padding: 3rem}
 .m-1{margin: 1rem;} .m-2{margin: 2rem;} .m-3{margin: 3rem;}.m-a{margin: auto}.m-n{margin: 0;}
@@ -255,9 +256,11 @@ img:hover
 {
     text-transform: capitalize;
 }
-.d-block{display: block;}.d-flex{display: flex;}.d-inline{display: inline;}.d-inline-block{display: inline-block}
+.d-block{display: block;}.d-inline{display: inline;}.d-inline-block{display: inline-block}
 .w-25{width: 25%}.w-50{width: 50%}.w-75{width: 75%}.w-100{width: 100%}
 .font-large{font-size: xx-large}
+.d-flex{display: flex;}.align-items-center{align-items: center} .justify-content-center{justify-content: center}
+.flex-column{flex-direction: column}
 /* End of Utility classes */
 
 /* Start of header styling */

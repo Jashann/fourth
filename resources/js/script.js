@@ -7,17 +7,17 @@ let clicked = false;
 function contentLoaded() {
     // Start of Smooth Scrolling
     $('#header nav a').on('click', function (e) {
-        if(e.target.id!=="noprevent")
+        if(e.target.id!=="noprevent") // To skip links linking to other pages like apps: dictionary
             e.preventDefault();
         // e.target === this; here
-        let HASH = this.hash;
+        let HASH = this.hash; // stores id
         if (HASH !== "") {
             if (window.innerWidth > 769)
-                $('html,body').animate({
+                $('html').animate({
                     scrollTop: $(HASH).offset().top - 63
                 }, 800);
             else
-                $('html,body').animate({
+                $('html').animate({
                     scrollTop: $(HASH).offset().top - 92
                 }, 800);
 

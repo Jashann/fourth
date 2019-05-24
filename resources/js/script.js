@@ -22,7 +22,14 @@ function contentLoaded() {
                 }, 800);
 
         }
+    });
 
+    $('#gotop').on('click',function(e)
+    {
+         e.preventDefault();
+         $('html').animate({
+            scrollTop: 0
+        }, 800);
     });
 
     // End of Smooth Scrolling

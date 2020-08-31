@@ -1,3 +1,3 @@
 # fourth
 
-Go to for having look at the website: https://github.com/Jashann/fourth
+Go to for having look at the website: https://jashann.github.io/fourth/
